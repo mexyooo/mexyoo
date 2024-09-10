@@ -1,0 +1,148 @@
+/* Grundlegende Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #333; /* Dunkelgrauer Hintergrund */
+    color: white;
+}
+
+/* Menü-Styles */
+#menu {
+    width: 200px;
+    background-color: #444;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: auto;
+    z-index: 10; /* Über dem Inhalt */
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    padding: 15px;
+}
+
+.menu-list li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-list li a:hover {
+    background-color: #575757;
+}
+
+/* Kachel-Container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px; /* Platz für das Menü */
+    padding: 20px;
+    gap: 20px; /* Abstand zwischen den Kacheln */
+}
+
+/* Kachel-Styles */
+.tile {
+    flex: 1 1 calc(20% - 20px); /* 4 Kacheln pro Reihe mit Abstand */
+    aspect-ratio: 4 / 3; /* Verhältnis 4:3 für die Höhe zur Breite */
+    overflow: hidden;
+    position: relative;
+    border: 3px solid white; /* 3 Pixel breiter weißer Rahmen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    z-index: 1; /* Standard Z-Index */
+}
+
+/* Hover-Effekt: Die Kachel wird um 10% vergrößert, ohne andere Kacheln zu beeinflussen */
+.tile:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* In den Vordergrund bringen */
+    border: 5px solid white; /* 5 Pixel breiter weißer Rahmen beim Hover */
+}
+
+/* Bild-Styles */
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: flex;
+    flex-direction: column; /* Bild und Caption untereinander anordnen */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%; /* Platz für Caption berücksichtigen */
+    margin: 0 auto; /* Zentrieren */
+    border: 10px solid white; /* Weißer Rahmen um das Bild */
+}
+
+.caption {
+    margin-top: 10px; /* Abstand zwischen Bild und Caption */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center; /* Text zentrieren */
+    max-width: 90%;
+    box-sizing: border-box; /* Padding in der Breite berücksichtigen */
+}
+
+/* Close and navigation buttons */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 30px;
+}
+
+.next {
+    right: 30px;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 200px; /* Platz für das Menü */
+    padding: 20px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schulten - Galerie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menü auf der linken Seite -->
+    <div id="menu">
+        <ul class="menu-list">
+            <li><a href="index.html">Galerie</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Bild-Kachel-Bereich -->
+    <div class="gallery">
+        <div class="tile"><img src="bild1.jpg" alt="Bild 1"></div>
+        <div class="tile"><img src="bild2.jpg" alt="Bild 2"></div>
+        <div class="tile"><img src="bild3.jpg" alt="Bild 3"></div>
+        <div class="tile"><img src="bild4.jpg" alt="Bild 4"></div>
+        <div class="tile"><img src="bild5.jpg" alt="Bild 5"></div>
+        <div class="tile"><img src="bild6.jpg" alt="Bild 6"></div>
+        <div class="tile"><img src="bild7.jpg" alt="Bild 7"></div>
+        <div class="tile"><img src="bild8.jpg" alt="Bild 8"></div>
+        <div class="tile"><img src="bild9.jpg" alt="Bild 9"></div>
+        <div class="tile"><img src="bild10.jpg" alt="Bild 10"></div>
+        <div class="tile"><img src="bild11.jpg" alt="Bild 11"></div>
+        <div class="tile"><img src="bild12.jpg" alt="Bild 12"></div>
+        <div class="tile"><img src="bild13.jpg" alt="Bild 13"></div>
+        <div class="tile"><img src="bild14.jpg" alt="Bild 14"></div>
+        <div class="tile"><img src="bild15.jpg" alt="Bild 15"></div>
+    </div>
+
+    <!-- Lightbox für vergrößerte Ansicht -->
+    <div id="lightbox" class="lightbox hidden">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="caption" id="lightbox-caption"></div>
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <!-- Verlinke die JavaScript-Datei -->
+    <script src="script.js"></script>
+</body>
+</html>
